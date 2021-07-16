@@ -1,0 +1,67 @@
+@import 'config';
+
+.video {
+  &-card {
+    color: #000;
+    margin-bottom: $margin-bottom;
+    text-decoration: none;
+  }
+
+  &-card:active {
+    color: #000;
+  }
+
+  &-card:hover {
+    cursor: pointer;
+  }
+
+  &-container {
+    position: relative;
+  }
+
+  &-thumbnail {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+  &-thumbnail img {
+    object-fit: contain;
+    width: 100%;
+  }
+
+  &-timestamp {
+    background-color: #000a;
+    border-radius: 5px;
+    bottom: 0;
+    color: #fff;
+    margin: 10px;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+  }
+
+  &-name {
+    margin: 5px 0;
+  }
+
+  &-uploadtime {
+    margin: 0;
+  }
+
+  &-linebrake {
+    margin-bottom: $margin-bottom;
+    margin-top: 80px;
+    width: 80%;
+  }
+}
+
+.button {
+  &__active {
+    display: none;
+  }
+}
+
+video {
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+<%- include('header', {title: title}) -%>
+<main>
+  <section class="video-view grid">
+    <h1><%= video.title %></h1>
+    <div class="video-container">
+      <video id="myVideo" controls>
+        <source src="<%= video.video %>" type="video/mp4"/>
+      </video>
+    </div>
+    <div class="video-description">
+      <p><%= video.description %></p>
+    </div>
+    <a href="/">Til baka</a>
+  </section>
+</main>
+<%- include('videoGroup', {group: {title: 'Tengd myndbönd', videos:video.related}, videos: videos}) -%>
+<%- include('footer') -%>

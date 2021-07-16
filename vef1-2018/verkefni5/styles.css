@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 20px;
+}
+
+.cards {
+  background: #eee;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+    max-width: 470px;
+    max-height: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+.card__image { /*div utan um mynd*/
+    flex: 0 0 150px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.card__img { /* img element html*/
+    max-width: 100%;
+}
+
+.card__tags { /*card__tags a ul*/
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    list-style: none;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    flex: 1 0 auto;
+}
+
+.card__tag { /*li*/
+   margin-right: 5px; 
+}
+
+.card__title { /*div utan um titil*/
+    margin-bottom: 20px;
+    font-size: 1.375em;
+    line-height: 1;
+    word-break: break-all;
+}
+
+.card__content { /*text og mynd*/
+    display: flex;
+    overflow-y: auto;
+}
+
+.card__text { /*div utan um texta*/ 
+    font-size: 1em;
+    line-height: 1.375;
+    word-break: break-all;
+}
+
+
+
+
+
+

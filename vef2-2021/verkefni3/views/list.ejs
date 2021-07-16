@@ -1,0 +1,54 @@
+<section class="registrations">
+  <h2 class="registrations-title">Undirskriftir</h2>
+
+  <% if (registrations.length === 0) { %>
+    <p class="registrations-empty">Engar undirskriftir.</p>
+  <% } else { %>
+    <p class="fjoldiundirskrifta">Fjöldi undirskrifta: <%= numberOfItems %></p>
+    <table class="registrations-table" cellpadding="0">
+      <tr>
+        <th>Dags</th>
+        <th>Nafn</th>
+        <th>Athugasemd</th>
+        <% if (user) { %>
+          <th>Eyða</th>
+        <% } %>
+      </tr>
+      <% registrations.forEach((row) => { %>
+        <tr>
+          <td class="date"><%= row.signed.toLocaleDateString('de-DE', {year: 'numeric', month: 'numeric', day: 'numeric'}) %></td>
+          <td class="name"><%= row.anonymous ? 'Nafnlaust' : row.name %></td>
+          <td class="comment"><%= row.comment %></td>
+          <% if (user) { %>
+            <td>
+              <div class="delete">
+                <form method="post" action="/delete">
+                  <input type="hidden" name="id" value="<%= row.id %>">
+                  <button class="eyda">Eyða</button>
+                </form>
+              </div>
+            </td>
+          <% } %>
+        </tr>
+      <% }) %>
+      </tr>
+    </table>
+  <% } %>
+  <div class="pagination">
+    <div class="prev">
+      <% if (hasPreviousPage) { %>
+      <a class="page-link" href="?page=1">Fyrsta síða</a>
+      <a class="page-link" href="?page=<%= previousPage %>">Fyrri síða</a>
+      <% } %>
+    </div>
+    <div class="current">
+      Síða <%= currentPage %> af <%= lastPage %>
+    </div>
+    <div class=next>
+      <% if (hasNextPage) { %>
+      <a class="page-link" href="?page=<%= nextPage %>">Næsta síða</a>
+      <a class="page-link" href="?page=<%= lastPage %>">Seinasta síða</a>
+      <% } %>
+    </div>
+  </div>
+</section>

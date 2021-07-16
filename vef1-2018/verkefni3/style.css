@@ -1,0 +1,150 @@
+
+/* almennar skilgreiningar */
+
+html {
+    font-size: 18px;
+    /*border-width: 3em;*/
+}
+
+h1 { 
+    margin-bottom: 2em;
+    font-size: 2em;
+    border-bottom: solid 1px;
+    border-color: #999;
+}
+
+h2 {
+    margin: 0;
+    padding: 0; /* ekki viss hvort thurfi */
+}
+
+/* texti */
+    /*fyrsta paragraph byrjar */
+.card-text p:nth-of-type(1) {
+   font-size: 1em;
+   margin-left: 0px; 
+   padding-left: 0px;
+}
+
+.card-text p:nth-of-type(1):first-line {
+    background-color: #ccc;    
+}
+       
+
+.card-text p:nth-of-type(1):first-letter {
+    font-size: 2em; 
+}
+    /*fyrsta paragraph endar */
+    /*annad paragraph byrjar */
+    
+.card-text p:nth-of-type(2) {
+    font-size: 0.88em;
+    margin-left: 2.77em;
+}
+
+
+.card-text p:nth-of-type(2):first-line {
+   background-color: #ddd; 
+}
+
+.card-text p:nth-of-type(2):first-letter {
+    font-size: 2em;
+}
+    /*annad paragraph endar */
+    /*thridja parapgraph byrjar */
+
+.card-text p:nth-of-type(3) {
+    font-size: 0.7778em;
+    margin-left: 5.55em;
+}
+
+.card-text p:nth-of-type(3):first-line {
+   background-color: #eee; 
+}
+
+.card-text p:nth-of-type(3):first-letter {
+    font-size: 2em;
+}
+    /*thridja parapgraph endar */
+/* cards */
+
+.cards {
+    border: 3px;
+    width: 37em;
+    display: inline-block;
+    text-align: center;
+}
+
+.card {
+    border: solid 1px;
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.card:nth-of-type(2n) {
+    background-color: #333;
+    color: #fff;
+}
+
+.card:nth-of-type(2n+1) {
+   background-color: #fff;
+   color: #333; 
+}
+/* vixla */
+.cards:hover .card:nth-of-type(2n) {
+   color: #333; 
+   background-color: #fff;
+}
+.cards:hover .card:nth-of-type(2n+1) {
+    color: #fff;
+    background-color: #333;
+}
+/*endvixl */
+.card-section h2 {
+    display: none;
+}
+
+.card-section {
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+button {
+    border: solid 5px;
+    border-top-color: #999;
+    border-right-color: #999;
+    border-bottom-color: #666;
+    border-left-color: #666;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+button-last-of-type {
+
+}
+
+button:hover {
+    border: solid 10px;
+    border-top-color: #666;
+    border-right-color: #666;
+    border-bottom-color: #999;
+    border-left-color: #999;
+}
+
+section:last-child {
+    border-bottom: solid 1px;
+    border-color: #c00;
+    padding-bottom: 1em;
+}
+
+body:last-child:after {
+    content: "Ekki meira efni";
+}

@@ -1,0 +1,21 @@
+
+-- Gott að hafa inni þegar við erum hugsanlega að henda og búa til aftur og aftur
+DROP TABLE IF EXISTS signatures;
+
+CREATE TABLE IF NOT EXISTS signatures(
+  id serial primary key,
+  name varchar(128) not null,
+  nationalId varchar(10) not null unique,
+  comment varchar(400) not null,
+  anonymous boolean not null default true,
+  signed timestamp with time zone not null default current_timestamp
+);
+
+-- TODO setja inn töflu fyrir notendur
+CREATE TABLE IF NOT EXISTS users(
+  id serial primary key,
+  username varchar(255) NOT NULL UNIQUE,
+  password varchar(255) NOT NULL
+);
+
+INSERT INTO users (username, password) VALUES ('admin', '$2a$11$pgj3.zySyFOvIQEpD7W6Aund1Tw.BFarXxgLJxLbrzIv/4Nteisii');
